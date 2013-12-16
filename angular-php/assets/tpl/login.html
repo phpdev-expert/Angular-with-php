@@ -1,0 +1,20 @@
+<h2>User Login</h2>
+<div class="row">
+  <div class="col-md-6">
+  <form novalidate name="loginform" id="add-new-form" method="post" action="">
+    <div class="form-group">
+      <label for="username">Username:*</label>
+      <input class="form-control" type="text" name="username" ng-model="login.username" required />
+    </div>
+    <div class="form-group">
+      <label for="first_name">Password:*</label>
+      <input class="form-control" type="password" ng-model="login.password" required />
+    </div>
+	<div class="form-group">
+      <span ng-show="logerror">Login detail wrong ! </span>
+    </div>
+    <button class="btn btn-primary" ng-disabled="loginform.$invalid" id="add-new-btn" ng-click="loginuser(login)">Login!</button>
+    <!--<a href="#/" class="btn">Cancel</a>-->
+  </form>
+</div>
+</div>
